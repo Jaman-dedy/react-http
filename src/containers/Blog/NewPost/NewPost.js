@@ -9,16 +9,16 @@ class NewPost extends Component {
     content: "",
     author: "Max"
   };
+  componentDidMount() {
+    console.log("props", this.props);
+  }
   postDataHandler = async () => {
     const post = {
       title: this.state.title,
       body: this.state.content,
       author: this.state.author
     };
-    const response = await axios.post(
-      "/posts",
-      post
-    );
+    const response = await axios.post("/posts", post);
     console.log("response", response);
   };
 
