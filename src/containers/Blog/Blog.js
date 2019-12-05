@@ -37,7 +37,8 @@ class Blog extends Component {
           {" "}
           <Route path="/new-post" component={NewPost} />
           <Route path="/posts" component={Posts} />
-          <Redirect from="/" to="/posts" />
+          <Route render={() => <h1>Not Found</h1>} />
+          {/* <Redirect from="/" to="/posts" /> */}
         </Switch>
       </div>
     );
